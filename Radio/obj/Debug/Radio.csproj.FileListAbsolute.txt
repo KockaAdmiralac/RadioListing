@@ -1,0 +1,15 @@
+C:\Users\Pera\Projects\Radio\Radio\bin\Debug\Radio.exe.config
+C:\Users\Pera\Projects\Radio\Radio\bin\Debug\Radio.exe
+C:\Users\Pera\Projects\Radio\Radio\bin\Debug\Radio.pdb
+C:\Users\Pera\Projects\Radio\Radio\bin\Debug\Interop.WMPLib.dll
+C:\Users\Pera\Projects\Radio\Radio\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Pera\Projects\Radio\Radio\obj\Debug\Radio.csprojResolveAssemblyReference.cache
+C:\Users\Pera\Projects\Radio\Radio\obj\Debug\Interop.WMPLib.dll
+C:\Users\Pera\Projects\Radio\Radio\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Pera\Projects\Radio\Radio\obj\Debug\Radio.csproj.ResolveComReference.cache
+C:\Users\Pera\Projects\Radio\Radio\obj\Debug\Radio.Properties.Resources.resources
+C:\Users\Pera\Projects\Radio\Radio\obj\Debug\Radio.csproj.GenerateResource.Cache
+C:\Users\Pera\Projects\Radio\Radio\obj\Debug\Radio.exe
+C:\Users\Pera\Projects\Radio\Radio\obj\Debug\Radio.pdb
+C:\Users\Pera\Projects\Radio\Radio\obj\Debug\Radio.Main.resources
+C:\Users\Pera\Projects\Radio\Radio\obj\Debug\Radio.Player.resources
