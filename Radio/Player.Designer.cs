@@ -31,7 +31,12 @@
             this.playButton = new System.Windows.Forms.Button();
             this.pauseButton = new System.Windows.Forms.Button();
             this.playText = new System.Windows.Forms.Label();
-            this.currentlyPlaying = new System.Windows.Forms.Label();
+            this.volumeBar = new System.Windows.Forms.TrackBar();
+            this.moveUpperLeft = new System.Windows.Forms.Button();
+            this.moveLowerRight = new System.Windows.Forms.Button();
+            this.exit = new System.Windows.Forms.Button();
+            this.currentlyPlaying = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.volumeBar)).BeginInit();
             this.SuspendLayout();
             // 
             // playButton
@@ -46,7 +51,7 @@
             // 
             // pauseButton
             // 
-            this.pauseButton.Location = new System.Drawing.Point(95, 12);
+            this.pauseButton.Location = new System.Drawing.Point(12, 46);
             this.pauseButton.Name = "pauseButton";
             this.pauseButton.Size = new System.Drawing.Size(77, 27);
             this.pauseButton.TabIndex = 1;
@@ -57,27 +62,76 @@
             // playText
             // 
             this.playText.AutoSize = true;
-            this.playText.Location = new System.Drawing.Point(12, 53);
+            this.playText.Location = new System.Drawing.Point(174, 6);
             this.playText.Name = "playText";
-            this.playText.Size = new System.Drawing.Size(90, 13);
+            this.playText.Size = new System.Drawing.Size(84, 13);
             this.playText.TabIndex = 3;
-            this.playText.Text = "Currently playing: ";
+            this.playText.Text = "Currently playing";
+            // 
+            // volumeBar
+            // 
+            this.volumeBar.Location = new System.Drawing.Point(98, 46);
+            this.volumeBar.Maximum = 25;
+            this.volumeBar.Name = "volumeBar";
+            this.volumeBar.Size = new System.Drawing.Size(240, 45);
+            this.volumeBar.TabIndex = 5;
+            this.volumeBar.Value = 12;
+            this.volumeBar.Scroll += new System.EventHandler(this.volumeBar_Scroll);
+            // 
+            // moveUpperLeft
+            // 
+            this.moveUpperLeft.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.moveUpperLeft.Location = new System.Drawing.Point(344, 36);
+            this.moveUpperLeft.Name = "moveUpperLeft";
+            this.moveUpperLeft.Size = new System.Drawing.Size(18, 21);
+            this.moveUpperLeft.TabIndex = 6;
+            this.moveUpperLeft.Text = "⟔";
+            this.moveUpperLeft.UseVisualStyleBackColor = true;
+            this.moveUpperLeft.Click += new System.EventHandler(this.moveUpperLeft_Click);
+            // 
+            // moveLowerRight
+            // 
+            this.moveLowerRight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.moveLowerRight.Location = new System.Drawing.Point(344, 63);
+            this.moveLowerRight.Name = "moveLowerRight";
+            this.moveLowerRight.Size = new System.Drawing.Size(18, 21);
+            this.moveLowerRight.TabIndex = 7;
+            this.moveLowerRight.Text = "⟓";
+            this.moveLowerRight.UseVisualStyleBackColor = true;
+            this.moveLowerRight.Click += new System.EventHandler(this.moveLowerRight_Click);
+            // 
+            // exit
+            // 
+            this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.exit.Location = new System.Drawing.Point(344, 9);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(18, 21);
+            this.exit.TabIndex = 8;
+            this.exit.Text = "X";
+            this.exit.UseVisualStyleBackColor = true;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
             // currentlyPlaying
             // 
-            this.currentlyPlaying.AutoSize = true;
-            this.currentlyPlaying.Location = new System.Drawing.Point(108, 53);
+            this.currentlyPlaying.Enabled = false;
+            this.currentlyPlaying.Location = new System.Drawing.Point(98, 22);
             this.currentlyPlaying.Name = "currentlyPlaying";
-            this.currentlyPlaying.Size = new System.Drawing.Size(0, 13);
-            this.currentlyPlaying.TabIndex = 4;
+            this.currentlyPlaying.ReadOnly = true;
+            this.currentlyPlaying.Size = new System.Drawing.Size(240, 20);
+            this.currentlyPlaying.TabIndex = 9;
+            this.currentlyPlaying.WordWrap = false;
             // 
             // Player
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(182, 84);
+            this.ClientSize = new System.Drawing.Size(375, 93);
             this.ControlBox = false;
             this.Controls.Add(this.currentlyPlaying);
+            this.Controls.Add(this.exit);
+            this.Controls.Add(this.moveLowerRight);
+            this.Controls.Add(this.moveUpperLeft);
+            this.Controls.Add(this.volumeBar);
             this.Controls.Add(this.playText);
             this.Controls.Add(this.pauseButton);
             this.Controls.Add(this.playButton);
@@ -91,6 +145,7 @@
             this.Text = "Player";
             this.TopMost = true;
             this.TransparencyKey = System.Drawing.Color.White;
+            ((System.ComponentModel.ISupportInitialize)(this.volumeBar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -101,6 +156,10 @@
         private System.Windows.Forms.Button playButton;
         private System.Windows.Forms.Button pauseButton;
         private System.Windows.Forms.Label playText;
-        private System.Windows.Forms.Label currentlyPlaying;
+        private System.Windows.Forms.TrackBar volumeBar;
+        private System.Windows.Forms.Button moveUpperLeft;
+        private System.Windows.Forms.Button moveLowerRight;
+        private System.Windows.Forms.Button exit;
+        private System.Windows.Forms.TextBox currentlyPlaying;
     }
 }
